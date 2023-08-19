@@ -8,210 +8,78 @@ stages <- list("...")
 
 heat <- list("1","2","3","4","5","6")
 
+timeP <- 0
+timeH <- 0
 time <- 0
 
-timer <- function(heat, pos1, pos2){
-  
-  #Heat 1
-  
-  if(heat == "1"){
-    
-    if(pos2 == pos1) {
-      time <- "00:02"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 0.5){
-      time <- "00:07"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1){
-      time <- "00:12"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1.5){
-      time <- "00:17"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2){
-      time <- "00:22"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2.5){
-      time <- "00:27"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3){
-      time <- "00:32"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3.5){
-      time <- "00:37"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4){
-      time <- "00:42"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4.5){
-      time <- "00:47"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5){
-      time <- "00:52"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5.5){
-      time <- "00:57"
-    }
-    
-    if(heat == input$Heat2) {
-      
-      time <- time + 
-      
-    }
-    
-  selected_value <- time
-  }
-  
-  #Heat 2
-  
-  else if(heat == "2") {
-    if(pos2 == pos1) {
-      time <- "01:02"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 0.5){
-      time <- "01:07"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1){
-      time <- "01:12"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1.5){
-      time <- "01:17"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2){
-      time <- "01:22"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2.5){
-      time <- "01:27"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3){
-      time <- "01:32"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3.5){
-      time <- "01:37"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4){
-      time <- "01:42"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4.5){
-      time <- "01:47"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5){
-      time <- "01:52"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5.5){
-      time <- "01:57"
-    }
-    
-    selected_value <- time
-  }
-  
-  #Heat 3
-  
-  else if(heat == "3") {
-    if(pos2 == pos1) {
-      time <- "02:02"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 0.5){
-      time <- "02:07"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1){
-      time <- "02:12"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1.5){
-      time <- "02:17"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2){
-      time <- "02:22"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2.5){
-      time <- "02:27"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3){
-      time <- "02:32"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3.5){
-      time <- "02:37"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4){
-      time <- "02:42"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4.5){
-      time <- "02:47"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5){
-      time <- "02:52"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5.5){
-      time <- "02:57"
-    }
-    
-    selected_value <- time
-  }
-  
-  #Heat 4
-  
-  else if(heat == "4") {
-    if(pos2 == pos1) {
-      time <- "04:02"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 0.5){
-      time <- "04:07"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1){
-      time <- "04:12"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1.5){
-      time <- "04:17"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2){
-      time <- "04:22"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2.5){
-      time <- "04:27"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3){
-      time <- "04:32"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3.5){
-      time <- "04:37"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4){
-      time <- "04:42"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4.5){
-      time <- "04:47"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5){
-      time <- "04:52"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5.5){
-      time <- "04:57"
-    }
-    
-    selected_value <- time
-  }
-  
-  #Heat 5
-  
-  else if(heat == "5") {
-    if(pos2 == pos1) {
-      time <- "05:02"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 0.5){
-      time <- "05:07"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1){
-      time <- "05:12"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1.5){
-      time <- "05:17"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2){
-      time <- "05:22"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2.5){
-      time <- "05:27"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3){
-      time <- "05:32"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3.5){
-      time <- "05:37"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4){
-      time <- "05:42"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4.5){
-      time <- "05:47"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5){
-      time <- "05:52"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5.5){
-      time <- "05:57"
-    }
-    
-    selected_value <- time
-  }
-  
-  #Heat 6
-  
-  else if(heat == "6") {
-    if(pos2 == pos1) {
-      time <- "06:02"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 0.5){
-      time <- "06:07"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1){
-      time <- "06:12"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 1.5){
-      time <- "06:17"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2){
-      time <- "06:22"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 2.5){
-      time <- "06:27"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3){
-      time <- "06:32"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 3.5){
-      time <- "06:37"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4){
-      time <- "06:42"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 4.5){
-      time <- "06:47"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5){
-      time <- "06:52"
-    } else if (as.numeric(pos2) - as.numeric(pos1) == 5.5){
-      time <- "06:57"
-    }
-    
-    selected_value <- time
-  }
-  
-  
+timer <- function(heat1, heat2, pos1, pos2) {
+
+if(as.numeric(heat1) == as.numeric(heat2)) {
+  timeH <- time + 0
+} else if ((as.numeric(heat2) - as.numeric(heat1)) == 1) {
+  timeH <- time + 60
+} else if ((as.numeric(heat2) - as.numeric(heat1)) == 2) {
+  timeH <- time + 120
+} else if ((as.numeric(heat2) - as.numeric(heat1)) == 3) {
+  timeH <- time + 180
+} else if ((as.numeric(heat2) - as.numeric(heat1)) == 4) {
+  timeH <- time + 240
+} else if ((as.numeric(heat2) - as.numeric(heat1)) == 5) {
+  timeH <- time + 300
+}
+
+if(as.numeric(pos2) == as.numeric(pos1)) {
+  timeP <- time + 0
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 0.5) {
+  timeP <- time + 5
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 1) {
+  timeP <- time + 10
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 1.5) {
+  timeP <- time + 15
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 2) {
+  timeP <- time + 20
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 2.5) {
+  timeP <- time + 25
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 3) {
+  timeP <- time + 30
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 3.5) {
+  timeP <- time + 35
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 4) {
+  timeP <- time + 40
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 4.5) {
+  timeP <- time + 45
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 5) {
+  timeP <- time + 50
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == 5.5) {
+  timeP <- time + 55
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -0.5) {
+  timeP <- time - 5
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -1) {
+  timeP <- time - 10
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -1.5) {
+  timeP <- time - 15
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -2) {
+  timeP <- time - 20
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -2.5) {
+  timeP <- time - 25
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -3) {
+  timeP <- time - 30
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -3.5) {
+  timeP <- time - 35
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -4) {
+  timeP <- time - 40
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -4.5) {
+  timeP <- time - 45
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -5) {
+  timeP <- time - 50
+} else if ((as.numeric(pos2) - as.numeric(pos1)) == -5.5) {
+  timeP <- time - 55
+} 
+
+time <- timeH + timeP
+
+print(time)
+
 }
 
 position <- list("1.0","1.5","2.0","2.5","3.0","3.5","4.0","4.5","5.0","5.5","6.0")
@@ -330,44 +198,102 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   
-  output$Scoreboard1 <- renderTable({
-    selected_value <- "00:00"})
+  #First Rider
   
+  output$Scoreboard1 <- renderTable({
+    sprintf("%02d:%02d:%02d", 0, 0, 0)
+    })
+  
+  #Second Rider
   
   output$Scoreboard2 <- renderTable({
-    timer(input$Heat2, input$Position1, input$Position2)
+    time2 <- timer(input$Heat1, input$Heat2, input$Position1, input$Position2)
+    time <- time2 + 2
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Third Rider
   
   output$Scoreboard3 <- renderTable({
-    timer(input$Heat3, input$Position1, input$Position3)
+    time3 <- timer(input$Heat1, input$Heat3, input$Position1, input$Position3)
+    time <- time2 + time3 + 3
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Fourth Rider
   
   output$Scoreboard4 <- renderTable({
-    timer(input$Heat4, input$Position1, input$Position4)
+    time <- timer(input$Heat1, input$Heat4, input$Position1, input$Position4) + 4
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Fifth Rider
   
   output$Scoreboard5 <- renderTable({
-    timer(input$Heat5, input$Position1, input$Position5)
+    time <- timer(input$Heat1, input$Heat5, input$Position1, input$Position5) + 5
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Six Rider
   
   output$Scoreboard6 <- renderTable({
-    timer(input$Heat6, input$Position1, input$Position6)
+    time <- timer(input$Heat1, input$Heat6, input$Position1, input$Position6) + 10
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Seven Rider
   
   output$Scoreboard7 <- renderTable({
-    timer(input$Heat7, input$Position1, input$Position7)
+    time <- timer(input$Heat1, input$Heat7, input$Position1, input$Position7) + 10
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Eight Rider
   
   output$Scoreboard8 <- renderTable({
-    timer(input$Heat8, input$Position1, input$Position8)
+    time <- timer(input$Heat1, input$Heat8, input$Position1, input$Position8) + 10
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
+  
+  #Ninth Rider
   
   output$Scoreboard9 <- renderTable({
-    timer(input$Heat9, input$Position1, input$Position9)
+    time <- timer(input$Heat1, input$Heat9, input$Position1, input$Position9) + 10
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
   
+  #Tenth Rider
+  
   output$Scoreboard10 <- renderTable({
-    timer(input$Heat10, input$Position1, input$Position10)
+    time <- timer(input$Heat1, input$Heat10, input$Position1, input$Position10) + 10
+    hours <- floor(time / 3600)
+    minutes <- floor((time %% 3600) / 60)
+    seconds <- time %% 60
+    sprintf("%02d:%02d:%02d", hours, minutes, seconds)
   })
   
 }
